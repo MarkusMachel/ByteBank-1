@@ -9,8 +9,13 @@ namespace ByteBank.ConsoleApp
     {
         static void Main(string[] args)
         {
+            //CalcularBonificacao();
+            //UsarSistema();
+            Console.ReadLine();
+        }
 
-            
+        private static void TestaInnerException()
+        {
             try 
             {
                 ContaCorrente conta = new ContaCorrente(10, 10);
@@ -38,14 +43,7 @@ namespace ByteBank.ConsoleApp
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
             }
-            
-            Console.WriteLine("linha depois do erro");
-
-            //CalcularBonificacao();
-            //UsarSistema();
-            Console.ReadLine();
         }
-
         public static void UsarSistema()
         {
             SistemaInterno sistemaInterno = new SistemaInterno();
