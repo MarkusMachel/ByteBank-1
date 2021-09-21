@@ -20,5 +20,10 @@ namespace ByteBank.ConsoleApp
             Console.WriteLine("Lendo linha. . .");
             return "Linha do arquivo";
         }
+
+        public void Fechar()
+        {
+            Console.WriteLine("Fechando arquivo");
+        }
     }
 }
