@@ -10,9 +10,36 @@ namespace ByteBank.ConsoleApp
         static void Main(string[] args)
         {
 
-            ContaCorrente conta = new ContaCorrente(74580, 87560);
-            Console.WriteLine(ContaCorrente.TaxaOperacao);
+            
+            try 
+            {
+                ContaCorrente conta = new ContaCorrente(10, 10);
+                conta.Depositar(100);
+                // Console.WriteLine(conta.Saldo);
+                conta.Sacar(90);
 
+                ContaCorrente conta2 = new ContaCorrente(21,56);
+                conta2.Transferir(1000, conta);
+
+                // Console.WriteLine(ContaCorrente.TaxaOperacao);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("erro capturado no parâmetro: " + ex.ParamName);
+                Console.WriteLine(ex.Message);
+            }
+            catch (SaldoInsuficienteException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+            catch (OperacaoFincanceiraException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+            }
+            
+            Console.WriteLine("linha depois do erro");
 
             //CalcularBonificacao();
             //UsarSistema();
