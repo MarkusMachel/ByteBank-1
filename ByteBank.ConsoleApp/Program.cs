@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Funcionarios.Common;
 using Sistema.Sistema;
 
@@ -11,7 +12,35 @@ namespace ByteBank.ConsoleApp
         {
             //CalcularBonificacao();
             //UsarSistema();
+
+            CarregarContas();
             Console.ReadLine();
+        }
+
+        private static void CarregarContas()
+        {
+                LeitorDeArquivos leitor = null;
+            try
+            {
+                leitor = new LeitorDeArquivos("contas.txt");
+
+                leitor.LerProximaLinha();
+
+                leitor.Fechar(); 
+            }
+            catch (IOException)
+            {
+            
+                Console.WriteLine("Exceção do tipo IOEception capturada.");
+            
+            }
+            finally
+            {
+                if (leitor != null)
+                {
+                    leitor.Fechar();
+                }
+            }
         }
 
         private static void TestaInnerException()

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,12 +13,18 @@ namespace ByteBank.ConsoleApp
         public LeitorDeArquivos(string arquivo)
         {
             Arquivo = arquivo;
+
+            throw new FileNotFoundException();
+
             Console.WriteLine("Abrindo arquivo: " + arquivo);
         }
 
         public string LerProximaLinha()
         {
             Console.WriteLine("Lendo linha. . .");
+
+            throw new IOException(); 
+            
             return "Linha do arquivo";
         }
 
