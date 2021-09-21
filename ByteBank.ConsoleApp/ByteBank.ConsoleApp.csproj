@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Funcionarios.Common\Funcionarios.Common.csproj" />
+    <ProjectReference Include="..\Sistema.Sistema\Sistema.Sistema.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MyPackage" Version="1.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

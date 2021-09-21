@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fk1NfTfCtCfuZeSXNjAtc19PfuNFp1k0XbpiDDdpUWvPS4UJ/DYiXyhnOW7EirDbz0SIn0HX7ZBqMgwWrLYJzg==",
+  "success": true,
+  "projectFilePath": "/home/markus/Desktop/ByteBank-master/ByteBank.ConsoleApp/ByteBank.ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "/home/markus/.nuget/packages/mypackage/1.0.0/mypackage.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
