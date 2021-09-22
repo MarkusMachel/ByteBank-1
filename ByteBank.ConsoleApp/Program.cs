@@ -19,28 +19,37 @@ namespace ByteBank.ConsoleApp
 
         private static void CarregarContas()
         {
-                LeitorDeArquivos leitor = null;
-            try
-            {
-                leitor = new LeitorDeArquivos("contas.txt");
 
+            using (LeitorDeArquivos leitor = new LeitorDeArquivos("teste.txt"))
+            {
                 leitor.LerProximaLinha();
+            }
+            
+            
+            
+            // -----------------------------------------
+            //     LeitorDeArquivos leitor = null;
+            // try
+            // {
+            //     leitor = new LeitorDeArquivos("contas.txt");
 
-                leitor.Fechar(); 
-            }
-            catch (IOException)
-            {
+            //     leitor.LerProximaLinha();
+
+            //     leitor.Fechar(); 
+            // }
+            // catch (IOException)
+            // {
             
-                Console.WriteLine("Exceção do tipo IOEception capturada.");
+            //     Console.WriteLine("Exceção do tipo IOEception capturada.");
             
-            }
-            finally
-            {
-                if (leitor != null)
-                {
-                    leitor.Fechar();
-                }
-            }
+            // }
+            // finally
+            // {
+            //     if (leitor != null)
+            //     {
+            //         leitor.Fechar();
+            //     }
+            // }
         }
 
         private static void TestaInnerException()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ByteBank.ConsoleApp
 {
-    public class LeitorDeArquivos
+    public class LeitorDeArquivos : IDisposable
     {
         public string Arquivo { get; }
 
@@ -14,7 +14,7 @@ namespace ByteBank.ConsoleApp
         {
             Arquivo = arquivo;
 
-            throw new FileNotFoundException();
+            // throw new FileNotFoundException();
 
             Console.WriteLine("Abrindo arquivo: " + arquivo);
         }
@@ -23,12 +23,12 @@ namespace ByteBank.ConsoleApp
         {
             Console.WriteLine("Lendo linha. . .");
 
-            throw new IOException(); 
+            // throw new IOException(); 
             
             return "Linha do arquivo";
         }
 
-        public void Fechar()
+        public void Dispose()
         {
             Console.WriteLine("Fechando arquivo");
         }
